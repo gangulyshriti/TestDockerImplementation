@@ -1,0 +1,20 @@
+{
+  "name": "Backend-test",
+  "version": "1.0.0",
+  "description": "backend test for quinncia",
+  "main": "server.js",
+  "scripts": {
+    "build": "NODE_ENV=docker nodemon server.js"
+  },
+  "author": "Anshul Dharmadhikari",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.5.3",
+    "multer": "^1.4.1",
+    "request-promise": "^4.2.4",
+    "restify": "^8.3.0",
+    "validator": "^10.11.0"
+  }
+}

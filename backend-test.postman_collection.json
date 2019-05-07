@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "0256223e-1edc-4291-878d-57351a14e3ce",
+		"name": "backend-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:3112/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"joh@doe.com\",\n\t\"name\" : \"john doe\",\n\t\"password\": \"Asdf1234\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3112/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3112",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3112/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"joh@doe.com\",\n\t\"password\" : \"Asdf1234\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3112/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3112",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3112/postPicture",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "c86af412809912ba6c638aa6d3bf7cf9",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "description",
+							"value": "earth",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3112/postPicture",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3112",
+					"path": [
+						"postPicture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3112/feed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "8eb8bcdd62bafca6d74185f95bb31ee5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3112/feed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3112",
+					"path": [
+						"feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3112/comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "8eb8bcdd62bafca6d74185f95bb31ee5",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"postId\" : \"5cc194ca6dc8a57211802a38\",\n\t\"comment\" : \"anshul comments on john's comment\",\n\t\"commentId\" : \"5cc196f1e04ab8741522129d\" \n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3112/comment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3112",
+					"path": [
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3112/deletePostOrComment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "8eb8bcdd62bafca6d74185f95bb31ee5",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : \"5cc194b86dc8a57211802a37\",\n\t\"deleteType\" : \"post\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3112/deletePostOrComment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3112",
+					"path": [
+						"deletePostOrComment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
