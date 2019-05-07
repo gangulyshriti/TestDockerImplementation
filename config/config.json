@@ -1,0 +1,28 @@
+{
+    "development": {
+        "config_id": "development",
+        "app_name": "backend test",
+        "debug": true,
+        "port": 3112,
+        "mongoDb": { 
+            "host": "localhost", 
+            "user": "",
+            "pass": "",
+            "port": 27017,
+            "database": "backendTest" 
+        }
+    },
+    "docker": {
+        "config_id": "development",
+        "app_name": "backend test",
+        "debug": true,
+        "port": 3111,
+        "mongoDb": { 
+            "host": "docker.for.mac.localhost", 
+            "user": "",
+            "pass": "",
+            "port": 27017,
+            "database": "backendTest" 
+        }
+    }
+}
